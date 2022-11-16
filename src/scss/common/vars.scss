@@ -19,11 +19,11 @@ $ff			: 'NEXT ART', sans-serif;
 $ff-logo	: 'Nebulosa Display Solid', sans-serif;
 
 // Font sizes.
-$fs-xs	: 12px;
-$fs-sm	: 14px;
-$fs-md	: 16px;
-$fs-lg	: 18px;
-$fs-xl	: 20px;
+$fs-xs	: 14px;
+$fs-sm	: 16px;
+$fs-md	: 20px;
+$fs-lg	: 30px;
+$fs-xl	: 40px;
 
 // Font weights.
 $fw-light	: 300;
@@ -38,6 +38,11 @@ $lh-title	: 1.3;
 // Colors.
 $white	: #FFFFFF;
 $black	: #000000;
+$main   : #00A676;
+$bg     : #F7F9F9;
+$alm    : #E0D0C1;
+$foot   : #A76D60;
 
 // Others.
 $tr: 0.35s;
+$op: 0.7;
