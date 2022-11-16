@@ -35,11 +35,13 @@ h3, .h3 {
 
 a {
 	display: inline-block;
+	font-family: $ff;
 	text-decoration: none;
-	transition: opacity ease-out $tr;
+	transition: color ease-out $tr;
+	color: $black;
 
 	&:hover {
-		opacity: $op;
+		color: $main;
 	}
 }
 

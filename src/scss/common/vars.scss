@@ -15,7 +15,7 @@ $container-xl: 1200px;
 $container-padding: 24px;
 
 // Font families.
-$ff			: 'NEXT ART', sans-serif;
+$ff			: 'Cera Round Pro', sans-serif;
 $ff-logo	: 'Nebulosa Display Solid', sans-serif;
 
 // Font sizes.
@@ -29,19 +29,21 @@ $fs-xl	: 40px;
 $fw-light	: 300;
 $fw-regular	: 400;
 $fw-semibold: 600;
-$fw-bold	: 700;
+$fw-bold	: 900;
 
 // Line heights.
 $lh			: 1.5;
 $lh-title	: 1.3;
 
 // Colors.
-$white	: #FFFFFF;
-$black	: #000000;
-$main   : #00A676;
+$white	: #fff;
+$black	: #000;
+$wheat	: #FEF9EF;
+$main   : #7EBCE6;
 $bg     : #F7F9F9;
-$alm    : #E0D0C1;
-$foot   : #A76D60;
+$alm    : #227C9D;
+$foot   : #FFCB77;
+$acc    : #17C3B2;
 
 // Others.
 $tr: 0.35s;
