@@ -1,4 +1,7 @@
 @import '../../node_modules/swiper/swiper-bundle.min';
+@import '../../node_modules/@fortawesome/fontawesome-free/css/fontawesome.min';
+@import '../../node_modules/@fortawesome/fontawesome-free/css/brands.min';
+@import '../../node_modules/@fortawesome/fontawesome-free/css/solid.min';
 // Defaults styles.
 @import 'common/fonts';
 @import 'common/vars';
@@ -14,7 +17,6 @@
 
 // Header styles.
 @import 'header/header';
-@import 'header/header-dropdowns';
 
 // Footer styles.
 @import 'footer/footer';
@@ -23,4 +25,5 @@
 @import 'sections/home/hero';
 @import 'sections/home/cards';
 @import 'sections/home/sidebar';
-@import 'sections/home/big';
+@import 'sections/home/big/big';
+@import 'sections/home/big/big-cards';

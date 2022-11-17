@@ -2,12 +2,12 @@
 	padding: 20px 0;
 	background: $wheat;
 
-	@media all and (min-width: $md) {
-		padding: 50px 0;
+	.container {
+		max-width: 1200px;
 	}
 
-	h2 {
-		margin: 20px 0;
+	@media all and (min-width: $md) {
+		padding: 50px 0;
 	}
 
 	&-wrapper {
@@ -15,14 +15,21 @@
 		flex-wrap: wrap;
 	}
 
-	&-frequent-breakdowns {
+	&-sections-wrapper {
 		width: 100%;
 
 		@media all and (min-width: $md) {
-			padding: 0 20px;
-			width: calc( 70% - 50px );
+			width: calc( 70% - 50px ); //
 			margin-left: 50px;
 		}
+	}
+
+	h2 {
+		margin: 20px 0;
+	}
+
+	&-frequent-breakdowns {
+		width: 100%;
 
 		@media all and (min-width: $lg) {
 			padding: 0;
