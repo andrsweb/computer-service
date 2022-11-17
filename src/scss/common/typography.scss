@@ -9,15 +9,17 @@ h3, .h3 {
 h1, .h1 {
 	font-size: 30px;
 	margin-bottom: 40px;
+	text-align: center;
 
 	@media all and (min-width: $lg) {
-		font-size: 40px
+		font-size: 45px
 	}
 }
 
 h2, .h2 {
 	font-size:	25px;
 	margin-bottom: 30px;
+	text-align: center;
 
 	@media all and (min-width: $lg) {
 		font-size: 30px

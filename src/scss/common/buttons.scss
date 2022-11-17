@@ -109,3 +109,20 @@
 		}
 	}
 }
+
+.form-button {
+	width: 100%;
+	max-width: 130px;
+	border: 0;
+	background: $acc;
+	color: $white;
+	padding: 10px 0;
+	font-size: 15px;
+	border-radius: 5px;
+	cursor: pointer;
+	transition: opacity ease $tr;
+
+	&:hover {
+		opacity: $op;
+	}
+}

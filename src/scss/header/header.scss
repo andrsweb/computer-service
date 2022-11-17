@@ -133,24 +133,21 @@
 	}
 
 	&-wrapper {
-		opacity: 0;
-		visibility: hidden;
+		display: none;
 
 		@media all and (min-width: $md) {
-			opacity: 1;
-			visibility: visible;
+			display: block;
 			width: 72%;
 		}
 
 		&.opened {
+			display: block;
 			overflow-y: auto;
-			visibility: visible;
-			opacity: 1;
 			position: fixed;
 			width: 100%;
 			top: 68px;
 			right: 0;
-			transition: opacity ease 2s;
+			background: $white;
 		}
 	}
 
