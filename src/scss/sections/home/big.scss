@@ -1,0 +1,87 @@
+.big {
+	padding: 20px 0;
+	background: $wheat;
+
+	@media all and (min-width: $md) {
+		padding: 50px 0;
+	}
+
+	h2 {
+		margin: 20px 0;
+	}
+
+	&-wrapper {
+		display: flex;
+		flex-wrap: wrap;
+	}
+
+	&-frequent-breakdowns {
+		width: 100%;
+
+		@media all and (min-width: $md) {
+			padding: 0 20px;
+			width: calc( 70% - 50px );
+			margin-left: 50px;
+		}
+
+		@media all and (min-width: $lg) {
+			padding: 0;
+		}
+	}
+
+	&-frequent-breakdowns-wrapper {
+		display: flex;
+		padding: 10px;
+		border-radius: 10px;
+		flex-wrap: wrap;
+		justify-content: center;
+		border: 5px solid $acc;
+		background: $white;
+		margin-bottom: 10px;
+
+		.big-row {
+			display: flex;
+			flex-direction: column;
+			width: 100%;
+			margin-bottom: 20px;
+			border-radius: 5px;
+
+			@media all and (min-width: $lg) {
+				flex-direction: row;
+			}
+
+			&:nth-child( n + 1) {
+				background: $wheat;
+			}
+		}
+
+		.big-col {
+			display: flex;
+			justify-content: center;
+			padding: 0 5px;
+			font-size: 15px;
+			width: 100%;
+			margin-bottom: 10px;
+
+			@media all and (min-width: $lg) {
+				justify-content: flex-start;
+
+				&:first-child {
+					width: 33.333%;
+				}
+
+				&:nth-child(2) {
+					width: 33.333%;
+				}
+
+				&:last-child {
+					width: 33.333%;
+				}
+			}
+
+			@media all and (min-width: $xl) {
+				font-size: 18px;
+			}
+		}
+	}
+}
