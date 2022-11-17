@@ -12,18 +12,85 @@
 
 	&-logo {
 		display: flex;
+		transition: opacity ease $tr;
+		cursor: pointer;
+
+		&:hover {
+			opacity: $op;
+		}
 
 		img {
 			max-width: 80%;
+
+			@media all and (min-width: $sm) {
+				max-width: 100%;
+			}
+
+			@media all and (min-width: $md) {
+				max-width: 70%;
+			}
+
+			@media all and (min-width: 860px) {
+				max-width: 100%;
+			}
 		}
 
 		&-text {
 			font-family: $ff-logo;
 			font-size: 10px;
+
+			@media all and (min-width: $sm) {
+				font-size: 14px;
+			}
+
+			@media all and (min-width: $m) {
+				font-size: 16px;
+			}
+
+			@media all and (min-width: $md) {
+				font-size: 12px;
+			}
+
+			@media all and (min-width: 860px) {
+				font-size: 13px;
+			}
+
+			@media all and (min-width: $lg) {
+				font-size: 16px;
+			}
+
+			@media all and (min-width: $xl) {
+				font-size: 20px;
+			}
 		}
 
 		&-subtext {
 			font-size: 10px;
+			font-weight: $fw-bold;
+
+			@media all and (min-width: $sm) {
+				font-size: 12px;
+			}
+
+			@media all and (min-width: $m) {
+				font-size: 14px;
+			}
+
+			@media all and (min-width: $md) {
+				font-size: 10px;
+			}
+
+			@media all and (min-width: 860px) {
+				font-size: 12px;
+			}
+
+			@media all and (min-width: $lg) {
+				font-size: 14px;
+			}
+
+			@media all and (min-width: $xl) {
+				font-size: 18px;
+			}
 		}
 
 		&-wrapp {
@@ -35,15 +102,33 @@
 		}
 	}
 
+	&-box {
+		@media all and (min-width: $md) {
+			display: flex;
+			align-items: center;
+		}
+	}
+
 	&-ui {
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
+
+		@media all and (min-width: $md) {
+			justify-content: flex-start;
+			width: 28%;
+		}
 	}
 
 	&-wrapper {
 		opacity: 0;
 		visibility: hidden;
+
+		@media all and (min-width: $md) {
+			opacity: 1;
+			visibility: visible;
+			width: 72%;
+		}
 
 		&.opened {
 			overflow-y: auto;
@@ -54,10 +139,6 @@
 			top: 68px;
 			right: 0;
 			transition: opacity ease 2s;
-
-			.header-inner-bot {
-				
-			}
 		}
 	}
 
@@ -66,6 +147,13 @@
 		flex-direction: column;
 		align-items: center;
 		justify-content: center;
+
+		@media all and (min-width: $md) {
+			flex-direction: row;
+			justify-content: space-between;
+			align-items: center;
+			margin-bottom: 10px;
+		}
 	}
 
 	&-inner-bot {
@@ -74,8 +162,18 @@
 		align-items: center;
 		justify-content: center;
 
+		@media all and (min-width: $md) {
+			flex-direction: row;
+			justify-content: space-between;
+			align-items: center;
+		}
+
 		.button {
 			margin-top: 30px;
+
+			@media all and (min-width: $md) {
+				margin: 0;
+			}
 		}
 	}
 
@@ -86,14 +184,43 @@
 		justify-content: center;
 		margin-top: 30px;
 
+		@media all and (min-width: $md) {
+			flex-direction: row;
+			justify-content: flex-start;
+			align-items: center;
+			margin-top: 0;
+		}
+
 		&-link {
 			font-family: $ff;
 			font-size: 20px;
 			margin-bottom: 5px;
 			font-weight: $fw-semibold;
 
+			@media all and (min-width: $sm) {
+				font-size: 24px;
+			}
+
+			@media all and (min-width: $md) {
+				font-size: 16px;
+				margin-bottom: 0;
+				margin-right: 10px;
+			}
+
+			@media all and (min-width: 860px) {
+				font-size: 20px;
+			}
+
+			@media all and (min-width: $lg) {
+				font-size: 24px;
+			}
+
+			@media all and (min-width: $xl) {
+				font-size: 28px;
+			}
+
 			&:last-child {
-				margin-bottom: 0	;
+				margin: 0;
 			}
 		}
 	}
@@ -104,14 +231,41 @@
 		align-items: center;
 		justify-content: center;
 
+		@media all and (min-width: $md) {
+			flex-direction: row;
+			justify-content: flex-start;
+			align-items: center;
+		}
+
 		&-link {
 			font-family: $ff;
 			font-size: 20px;
 			margin-bottom: 5px;
 			font-weight: $fw-semibold;
 
+			@media all and (min-width: $sm) {
+				font-size: 24px;
+			}
+
+			@media all and (min-width: $md) {
+				font-size: 11px;
+				margin: 0 10px 0 0;
+			}
+
+			@media all and (min-width: 860px) {
+				font-size: 13px;
+			}
+
+			@media all and (min-width: $lg) {
+				font-size: 16px;
+			}
+
+			@media all and (min-width: $xl) {
+				font-size: 19px;
+			}
+
 			&:last-child {
-				margin-bottom: 0	;
+				margin: 0;
 			}
 		}
 	}
@@ -125,6 +279,86 @@
 		color: $main;
 		font-size: 24px;
 		margin: 20px 0;
+
+		@media all and (min-width: $sm) {
+			font-size: 28px;
+		}
+
+		@media all and (min-width: $md) {
+			font-size: 16px;
+			margin: 0;
+		}
+
+		@media all and (min-width: 860px) {
+			font-size: 17px;
+		}
+
+		@media all and (min-width: 1100px) {
+			font-size: 25px;
+		}
+	}
+
+	&-work {
+		margin: 20px 0;
+		display: flex;
+		justify-content: center;
+		color: $main;
+		text-transform: uppercase;
+		font-size: 16px;
+
+		@media all and (min-width: $md) {
+			margin: 0;
+			justify-content: flex-start;
+		}
+
+		@media all and (min-width: 860px) {
+			font-size: 20px;
+		}
+
+		@media all and (min-width: $lg) {
+			font-size: 22px;
+		}
+
+		@media all and (min-width: $xl) {
+			font-size: 24px;
+		}
+
+		.header-time {
+			font-family: $ff;
+			font-weight: $fw-bold;
+			line-height: 1;
+			margin-right: 40px;
+		}
+
+		.header-week {
+			font-family: $ff;
+			font-weight: $fw-bold;
+			line-height: 1;
+		}
+	}
+
+	&-socials-wrapper {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: space-between;
+
+		@media all and (min-width: $md) {
+			flex-direction: row;
+		}
+	}
+
+	&-social {
+		margin-right: 5px;
+		transition: opacity ease $tr;
+
+		&:last-child {
+			margin-right: 0;
+		}
+
+		&:hover {
+			opacity: $op;
+		}
 	}
 }
 
