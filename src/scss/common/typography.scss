@@ -29,6 +29,7 @@ h2, .h2 {
 h3, .h3 {
 	font-size: 22px;
 	margin-bottom: 20px;
+	text-align: center;
 
 	@media all and (min-width: $lg) {
 		font-size: 25px
