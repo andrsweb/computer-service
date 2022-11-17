@@ -1,7 +1,7 @@
 document.addEventListener( 'DOMContentLoaded', () => {
     'use strict'
 
-    toggleBurgerMenu( '.burger-button', '.header-inner-wrapper' )
+    toggleBurgerMenu( '.burger-button', '.header-wrapper' )
 } )
 
 const toggleBurgerMenu = ( button, selector ) => {

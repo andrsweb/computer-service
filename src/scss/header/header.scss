@@ -1,5 +1,130 @@
 .header{
-    font-family: $ff;
-    font-size: 50px;
+	padding: 15px 0;
+	background: $bg;
+	position: fixed;
+	width: 100%;
+	top: 0;
+	right: 0;
+
+	.container {
+		max-width: 1200px;
+	}
+
+	&-logo {
+		display: flex;
+
+		img {
+			max-width: 80%;
+		}
+
+		&-text {
+			font-family: $ff-logo;
+			font-size: 10px;
+		}
+
+		&-subtext {
+			font-size: 10px;
+		}
+
+		&-wrapp {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			margin-right: 5px;
+		}
+	}
+
+	&-ui {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	&-wrapper {
+		opacity: 0;
+		visibility: hidden;
+
+		&.opened {
+			overflow-y: auto;
+			visibility: visible;
+			opacity: 1;
+			position: fixed;
+			width: 100%;
+			top: 68px;
+			right: 0;
+			transition: opacity ease 2s;
+
+			.header-inner-bot {
+				
+			}
+		}
+	}
+
+	&-inner-top {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+	}
+
+	&-inner-bot {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+
+		.button {
+			margin-top: 30px;
+		}
+	}
+
+	&-nav-top {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		margin-top: 30px;
+
+		&-link {
+			font-family: $ff;
+			font-size: 20px;
+			margin-bottom: 5px;
+			font-weight: $fw-semibold;
+
+			&:last-child {
+				margin-bottom: 0	;
+			}
+		}
+	}
+
+	&-nav-bot {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+
+		&-link {
+			font-family: $ff;
+			font-size: 20px;
+			margin-bottom: 5px;
+			font-weight: $fw-semibold;
+
+			&:last-child {
+				margin-bottom: 0	;
+			}
+		}
+	}
+
+	&-phone {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		font-family: $ff;
+		font-weight: $fw-bold;
+		color: $main;
+		font-size: 24px;
+		margin: 20px 0;
+	}
 }
 
