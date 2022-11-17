@@ -1,0 +1,112 @@
+.hero {
+	padding: 100px 0 30px;
+	background: $wheat;
+
+	@media all and (min-width: $md) {
+		padding: 180px 0 30px;
+	}
+
+	@media all and (min-width: $lg) {
+		padding: 220px 0 30px;
+	}
+
+	.container{
+		max-width: 1200px;
+	}
+
+	&-swiper {
+		display: flex;
+	}
+
+	&-slide {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+
+		&-text {
+			width: 100%;
+
+			@media all and (min-width: $md) {
+				width: 50%;
+			}
+		}
+
+		&-list {
+			margin-bottom: 30px;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+
+			@media all and (min-width: $md) {
+				align-items: flex-start;
+			}
+		}
+
+		&-list-item {
+			position: relative;
+			padding-left: 20px;
+			font-size: 16px;
+
+			@media all and (min-width: $m) {
+				font-size: 18px;
+			}
+
+			@media all and (min-width: $xl) {
+				font-size: 22px;
+			}
+
+			&::after {
+				content: "";
+				position: absolute;
+				display: block;
+				width: 10px;
+				height: 10px;
+				background: $acc;
+				border-radius: 2px;
+				top: 50%;
+				left: 0;
+				transform: translateY( -50% );
+			}
+		}
+
+		&-img {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			width: 100%;
+
+			@media all and (min-width: $md) {
+				width: 50%;
+			}
+		}
+	}
+
+	&-arrows {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		margin-top: 10px;
+	}
+
+	.swiper-prev {
+		margin-right: 50px;
+		cursor: pointer;
+		transition: scale ease $tr;
+
+		img {
+			transform: rotate(180deg);
+		}
+
+		&:hover {
+			scale: 1.05;
+		}
+	}
+	.swiper-next {
+		cursor: pointer;
+		transition: scale ease $tr;
+
+		&:hover {
+			scale: 1.05;
+		}
+	}
+}

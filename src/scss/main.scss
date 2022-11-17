@@ -1,3 +1,4 @@
+@import '../../node_modules/swiper/swiper-bundle.min';
 // Defaults styles.
 @import 'common/fonts';
 @import 'common/vars';
@@ -6,6 +7,10 @@
 @import 'common/base';
 @import 'common/fonts';
 @import 'common/buttons';
+
+//forms
+
+@import 'sections/forms/small-form';
 
 // Header styles.
 @import 'header/header';
