@@ -1,12 +1,13 @@
 document.addEventListener( 'DOMContentLoaded', () => {
     'use strict'
 
-    toggleBurgerMenu( '.burger-button', '.header-wrapper' )
+    toggleBurgerMenu( '.burger-button', '.header-wrapper', '.has-children' )
 } )
 
-const toggleBurgerMenu = ( button, selector ) => {
+const toggleBurgerMenu = ( button, selector, child  ) => {
     const burgerButton  = document.querySelector( button )
     const headerWrapper = document.querySelector( selector )
+	const headerNavLink = document.querySelectorAll( child )
 
     burgerButton.addEventListener( 'click', () => {
         if( ! burgerButton && ! headerWrapper ) return
@@ -20,20 +21,13 @@ const toggleBurgerMenu = ( button, selector ) => {
 		}
     } )
 
-    window.addEventListener('resize', () => {
-		const headerInnerWrapperOpened = document.querySelector( '.header-inner-wrapper.opened' )
+	headerNavLink.forEach( item => {
+		item.addEventListener( 'click', e => {
+			e.preventDefault()
 
-		if( ! headerInnerWrapperOpened ) return
-
-		reCalculateDropdownHeight( headerInnerWrapperOpened )
-	})
-
-	const reCalculateDropdownHeight = () => {
-		const headerInnerWrapp  = document.querySelector( '.header-inner-wrapper' )
-		const dropdownInner  = document.querySelector( '.header-inner' )
-
-		if (! headerInnerWrapp || ! dropdownInner) return
-
-		headerInnerWrapp.style.height = `${ dropdownInner.getBoundingClientRect().height }px`
-	}
+			if( ! item.classList.contains( 'opened' ) ) {
+				item.classList.add( 'opened' )
+			} else item.classList.remove( 'opened' )
+		} )
+	} )
 }

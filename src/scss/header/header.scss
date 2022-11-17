@@ -1,10 +1,22 @@
 .header{
-	padding: 15px 0;
+	padding: 20px 0;
 	background: $bg;
 	position: fixed;
-	width: 100%;
 	top: 0;
 	right: 0;
+	width: 100%;
+	z-index: 100;
+	transition: box-shadow ease $tr,
+				padding ease $tr;
+
+		&.scrolled {
+			box-shadow: 1px 1px 6px 1px #f3ececef;
+			padding: 15px 0;
+
+			@media all and (min-width: $md) {
+				padding: 15px 0;
+			}
+		}
 
 	.container {
 		max-width: 1200px;
@@ -237,7 +249,8 @@
 			align-items: center;
 		}
 
-		&-link {
+		&-item {
+			position: relative;
 			font-family: $ff;
 			font-size: 20px;
 			margin-bottom: 5px;
@@ -266,6 +279,20 @@
 
 			&:last-child {
 				margin: 0;
+			}
+
+			&::after {
+				position: absolute;
+				bottom: -50%;
+				right: 50%;
+				transform: translateX( 50% );
+				content: "";
+				display: block;
+				width: 0;
+				height: 0;
+				border-left: 5px solid transparent;
+				border-right: 5px solid transparent;
+				border-top: 10px solid $main;
 			}
 		}
 	}
