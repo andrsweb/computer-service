@@ -41,12 +41,18 @@
 		}
     }
 
-    .swiper-pagination-bullet {
-        width: 40px;
-        height: 40px;
+    .swiper-scrollbar-drag {
+        background: $alm;
+        cursor: pointer;
+        transition: opacity ease $tr;
 
-        &-active {
-            background: $black;
+        &:hover {
+            opacity: $op;
         }
+    }
+
+    .swiper-scrollbar.swiper-scrollbar-horizontal {
+        background: $main;
+        height: 20px;
     }
 }
