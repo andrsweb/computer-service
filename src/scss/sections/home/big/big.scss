@@ -1,6 +1,6 @@
 .big {
 	padding: 20px 0;
-	background: $wheat;
+	background: $sect;
 
 	.container {
 		max-width: 1200px;
@@ -58,7 +58,7 @@
 			}
 
 			&:nth-child( n + 1) {
-				background: $wheat;
+				background: $main;
 			}
 		}
 

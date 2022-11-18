@@ -1,6 +1,6 @@
 .header{
 	padding: 20px 0;
-	background: $bg;
+	background: $head;
 	position: fixed;
 	top: 0;
 	right: 0;
@@ -147,7 +147,7 @@
 			width: 100%;
 			top: 68px;
 			right: 0;
-			background: $white;
+			background: $sect;
 		}
 	}
 
@@ -306,7 +306,7 @@
 					height: 0;
 					border-left: 5px solid transparent;
 					border-right: 5px solid transparent;
-					border-top: 10px solid $main;
+					border-top: 10px solid $white;
 					transition: transform ease $tr;
 				}
 			}
@@ -321,10 +321,11 @@
 		left: 50%;
 		display: flex;
 		flex-wrap: wrap;
-		background: $bg;
+		background: $main;
 		width: 250px;
 		transform: translateX( -50% );
 		padding: 10px;
+		z-index: 2;
 
 		.header-nav-item {
 			margin-bottom: 10px;
@@ -343,7 +344,7 @@
 		align-items: center;
 		font-family: $ff;
 		font-weight: $fw-bold;
-		color: $main;
+		color: $white;
 		font-size: 24px;
 		margin: 20px 0;
 
@@ -395,12 +396,14 @@
 			font-weight: $fw-bold;
 			line-height: 1;
 			margin-right: 40px;
+			color: $white;
 		}
 
 		.header-week {
 			font-family: $ff;
 			font-weight: $fw-bold;
 			line-height: 1;
+			color: $white;
 		}
 	}
 
