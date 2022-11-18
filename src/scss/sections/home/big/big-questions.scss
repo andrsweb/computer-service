@@ -1,0 +1,82 @@
+.big-questions {
+    padding: 50px 0;
+
+    &-wrapper {
+        padding: 20px 10px;
+        background: $white;
+        border-radius: 20px;
+    }
+
+    &-row {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        margin-bottom: 30px;
+
+        @media all and (min-width: $xl) {
+            flex-direction: row;
+        }
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    &-col {
+        display: flex;
+        align-items: center;
+        font-size: 15px;
+        text-align: center;
+
+        @media all and (min-width: $xl) {
+			font-size: 18px;
+            text-align: left;
+		}
+
+        &:first-child {
+            width: 100%;
+            margin-bottom: 20px;
+
+            @media all and (min-width: $xl) {
+                width: 50%;
+                margin-bottom: 0;
+            }
+
+            &::after {
+                content: "";
+                display: none;
+                width: 20px;
+                height: 20px;
+                border-bottom: 4px solid $main;
+                border-right: 4px solid $main;
+                transform: rotate( -45deg);
+                border-radius: 2px;
+
+                @media all and (min-width: $xl) {
+                    display: block;
+                }
+            }
+        }
+
+        &:last-child {
+            padding: 10px;
+            width: 100%;
+            color: $alm;
+            background: $wheat;
+            border-radius: 20px;
+
+            @media all and (min-width: $xl) {
+                width: 50%;
+            }
+        }
+
+        span {
+            font-family: $ff;
+            font-weight: $fw-bold;
+            color: $alm;
+            margin-right: 10px;
+            font-size: 25px;
+        }
+    }
+}
