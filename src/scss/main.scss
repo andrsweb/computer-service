@@ -14,7 +14,6 @@
 
 // Header styles.
 @import 'header/header';
-@import 'header/header-dropdowns';
 
 // Footer styles.
 @import 'footer/footer';
@@ -23,3 +22,9 @@
 @import 'sections/home/hero';
 @import 'sections/home/cards';
 @import 'sections/home/sidebar';
+@import 'sections/home/big/big';
+@import 'sections/home/big/big-cards';
+@import 'sections/home/big/big-masters';
+@import 'sections/home/big/big-testi';
+@import 'sections/home/big/big-questions';
+@import 'sections/home/big/big-bottom-form';

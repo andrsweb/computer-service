@@ -23,11 +23,16 @@ const toggleBurgerMenu = ( button, selector, child  ) => {
 
 	headerNavLink.forEach( item => {
 		item.addEventListener( 'click', e => {
-			e.preventDefault()
+			const target = e.target
+
+			if( target.tagName !== 'A' ) e.preventDefault()
+			else return
 
 			if( ! item.classList.contains( 'opened' ) ) {
+				headerNavLink.forEach( item => item.classList.remove( 'opened' ) )
 				item.classList.add( 'opened' )
-			} else item.classList.remove( 'opened' )
+			}
+			else item.classList.remove( 'opened' )
 		} )
 	} )
 }

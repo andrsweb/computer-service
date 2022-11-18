@@ -1,0 +1,89 @@
+<section class="big">
+	<div class="container">
+		<div class="big-wrapper">
+			@@include( '../../sections/home/sidebar/sidebar.html')
+			<div class="big-sections-wrapper">
+				<section class="big-frequent-breakdowns">
+					<h2>Частые неисправности</h2>
+					<div class="big-frequent-breakdowns-wrapper">
+						@@include( 'big-often.html')
+					</div>
+					<h3>Мы устраним любые неисправности!</h3>
+				</section>
+				<section class="big-scheme">
+					<h2>Схема работы с техникой</h2>
+					<div class="big-scheme-items">
+						@@loop( 'big-scheme-item.html', [
+							{ "title": "Заказ", "span": "01",
+								"text": "Вы делаете заказ по телефону или онлайн через наш сайт.",
+								"img": "img/big/tel.png"},
+							{ "title": "Диагностика", "span": "02",
+								"text": "В срок от 30 минут мастер приезжает к вам и производит диагностику.",
+								"img": "img/big/diag.png"},
+							{ "title": "Стоимость", "span": "03",
+								"text": "Если вас устраивает стоимость  услуг, мы приступаем к работам.",
+								"img": "img/big/girl.png"},
+							{ "title": "Результат", "span": "04", "text": "По окончании работ вы получаете  исправную технику и бланк.",
+								"img": "img/big/mono.png"}
+						] )
+					</div>
+				</section>
+				<section class="big-masters">
+					<h2>Наши мастера</h2>
+					<div class="big-masters-items">
+						@@include( 'big-masters-item.html')
+					</div>
+				</section>
+				<section class="swiper testimonials">
+					<h2>Отзывы</h2>
+					<div class="swiper-wrapper testimonials-items">
+						@@include( 'big-testi-slide.html')
+					</div>
+					<div class="swiper-scrollbar"></div>
+				</section>
+				<section class="big-questions">
+					<h2>Частые вопросы</h2>
+					<div class="big-questions-wrapper">
+						<div class="big-questions-row">
+							<div class="big-questions-col">
+								<span>01</span>
+								Как быстро приедет мастер?
+							</div>
+							<div class="big-questions-col">
+								В течении 30 минут или в любое другое удобное для вас время
+							</div>
+						</div>
+						<div class="big-questions-row">
+							<div class="big-questions-col">
+								<span>02</span>
+								Какая гарантия на услуги?
+							</div>
+							<div class="big-questions-col">
+								Гарантия до 3-лет. Более подробно уточняйте у наших специалистов
+							</div>
+						</div>
+						<div class="big-questions-row">
+							<div class="big-questions-col">
+								<span>04</span>
+								Сколько стоит диагностика?
+							</div>
+							<div class="big-questions-col">
+								Бесплатно, при продолжении работы.
+							</div>
+						</div>
+					</div>
+				</section>
+				<section class="big-bottom-form">
+					<div class="big-bottom-form-wrapper">
+						@@include( '../../../forms/small-form.html')
+						<div class="big-bottom-form-info">
+							<h3>У вас есть вопросы? Нужна помощь специалистов?</h3>
+							<p class="big-bottom-form-text">Введите Ваш номер телефона и специалист Вам перезвонит в течение 1 минуты,
+								ответит на все интересующие Вас вопросы или оформит заказ.</p>
+						</div>
+					</div>
+				</section>
+			</div>
+		</div>
+	</div>
+</section>
