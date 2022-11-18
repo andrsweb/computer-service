@@ -1,0 +1,52 @@
+.testimonials {
+    padding: 50px 0;
+    position: relative;
+
+    &-inner {
+        display: flex;
+        flex-direction: column;
+        background: $white;
+        padding: 20px;
+        border-radius: 20px;
+    }
+
+    &-info {
+        display: flex;
+        justify-content: flex-start;
+    }
+
+    &-img {
+        margin: 0 20px 20px 0;
+    }
+
+    &-name {
+        font-weight: $fw-bold;
+        margin-bottom: 10px;
+    }
+
+    &-stars {
+        display: flex;
+    }
+
+    &-text {
+        font-size: 10px;
+        padding: 0 10px;
+
+        @media all and (min-width: $lg) {
+			font-size: 15px;
+		}
+
+        @media all and (min-width: $xxl) {
+			font-size: 18px;
+		}
+    }
+
+    .swiper-pagination-bullet {
+        width: 40px;
+        height: 40px;
+
+        &-active {
+            background: $black;
+        }
+    }
+}
