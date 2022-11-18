@@ -3,9 +3,9 @@
     flex-direction: column;
     width: 100%;
     border: 5px solid $acc;
+    border-radius: 20px;
     padding: 10px 5px;
     background: $main;
-    border-radius: 5px;
 
     @media all and (min-width: $md) {
         width: 30%;
@@ -167,7 +167,7 @@
         color: $acc;
         vertical-align: middle;
         transform: translateY(100%);
-        animation: text 150s linear infinite alternate-reverse;
+        animation: text 100s linear infinite alternate-reverse;
         letter-spacing: 50px;
 
         @media all and (min-width: $lg) {

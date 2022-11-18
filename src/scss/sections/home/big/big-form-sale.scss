@@ -1,0 +1,97 @@
+.big-form-sale {
+	padding: 20px 10px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	background: $head;
+	border-radius: 20px;
+	border: 4px solid $acc;
+
+	@media all and (min-width: $xl) {
+		padding: 50px 20px;
+	}
+
+	@media all and (min-width: $xl) {
+		flex-direction: row;
+	}
+
+	.big-h2 {
+		color: $white;
+		font-size: 20px; //45
+		text-align: center;
+
+		@media all and (min-width: $sm) {
+			font-size: 30px;
+		}
+
+		@media all and (min-width: $xl) {
+			font-size: 45px;
+		}
+	}
+
+	.big-h3 {
+		color: $acc;
+		font-size: 15px;
+		margin: 0;
+		text-align: center;
+
+		@media all and (min-width: $sm) {
+			font-size: 20px;
+		}
+
+		@media all and (min-width: $xl) {
+			font-size: 25px;
+		}
+	}
+
+	&-titles {
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+
+		@media all and (min-width: $xl) {
+			width: calc( 70% - 20px );
+			margin-right: 20px;
+		}
+	}
+
+	.small-form-wrapper {
+		width: 100%;
+
+		@media all and (min-width: $xl) {
+			width: 30%;
+		}
+	}
+	.small-form {
+		width: 100%;
+
+		fieldset {
+			flex-direction: column;
+
+			@media all and (min-width: $sm) {
+				flex-direction: row;
+			}
+
+			@media all and (min-width: $xl) {
+				flex-direction: column;
+			}
+
+			input {
+				max-width: 100%;
+				margin: 0 0 10px 0;
+
+				@media all and (min-width: $sm) {
+					margin: 0 10px 0 0;
+				}
+
+				@media all and (min-width: $xl) {
+					margin: 0 0 10px 0;
+				}
+			}
+		}
+
+		.form-button {
+			max-width: 100%;
+		}
+	}
+}

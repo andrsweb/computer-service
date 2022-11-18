@@ -11,6 +11,7 @@
 //forms
 
 @import 'sections/forms/small-form';
+@import 'sections/home/big/big-form-sale';
 
 // Header styles.
 @import 'header/header';
@@ -28,3 +29,7 @@
 @import 'sections/home/big/big-testi';
 @import 'sections/home/big/big-questions';
 @import 'sections/home/big/big-bottom-form';
+
+//price styles
+@import 'sections/home/big/big-price';
+@import 'sections/home/big/big-info';
