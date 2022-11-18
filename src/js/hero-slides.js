@@ -1,4 +1,4 @@
-import Swiper, { Navigation, Scrollbar } from 'swiper';
+import Swiper, { Navigation, Pagination, Scrollbar } from 'swiper';
 
 document.addEventListener( 'DOMContentLoaded', () => {
 	'use strict'
@@ -15,7 +15,7 @@ const testiSwiper = () => {
         spaceBetween: 50,
         grabCursor: 1,
 
-        modules: [ Navigation, Scrollbar ],
+        modules: [ Navigation, Scrollbar, Pagination ],
 
         navigation: {
             nextEl: '.swiper-next',
@@ -25,6 +25,11 @@ const testiSwiper = () => {
         scrollbar: {
             el: '.swiper-scrollbar',
             draggable: 1
+        },
+
+        pagination: {
+            el: '.swiper-pagination',
+            type: 'fraction'
         }
 	} )
 }
