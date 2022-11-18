@@ -48,8 +48,8 @@
                 display: none;
                 width: 20px;
                 height: 20px;
-                border-bottom: 4px solid $main;
-                border-right: 4px solid $main;
+                border-bottom: 4px solid $acc;
+                border-right: 4px solid $acc;
                 transform: rotate( -45deg);
                 border-radius: 2px;
 
@@ -62,8 +62,8 @@
         &:last-child {
             padding: 10px;
             width: 100%;
-            color: $alm;
-            background: $wheat;
+            color: $white;
+            background: $acc;
             border-radius: 20px;
 
             @media all and (min-width: $xl) {
@@ -74,7 +74,7 @@
         span {
             font-family: $ff;
             font-weight: $fw-bold;
-            color: $alm;
+            color: $acc;
             margin-right: 10px;
             font-size: 25px;
         }

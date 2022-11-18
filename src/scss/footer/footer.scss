@@ -1,0 +1,30 @@
+.footer {
+    padding: 20px 0;
+    background: $head;
+
+    @media all and (min-width: $md) {
+        padding: 50px 0;
+    }
+
+    &-wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        @media all and (min-width: $md) {
+            flex-direction: row;
+        }
+    }
+
+    .header-phone {
+        color: $white;
+    }
+
+    .header-logo {
+        margin: 0 auto;
+
+        @media all and (min-width: $md) {
+            margin: 0;
+        }
+    }
+}
