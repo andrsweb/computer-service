@@ -1,4 +1,4 @@
-import Swiper, { Navigation } from 'swiper';
+import Swiper, { EffectFade, Navigation } from 'swiper';
 
 document.addEventListener( 'DOMContentLoaded', () => {
 	'use strict'
@@ -15,7 +15,12 @@ const testiSwiper = () => {
         spaceBetween: 50,
         grabCursor: 1,
 
-        modules: [ Navigation ],
+        modules: [ Navigation, EffectFade ],
+
+        effect: 'fade',
+        fadeEffect: {
+            crossFade: true
+        },
 
         navigation: {
             nextEl: '.swiper-next',

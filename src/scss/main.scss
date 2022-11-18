@@ -1,7 +1,4 @@
 @import '../../node_modules/swiper/swiper-bundle.min';
-@import '../../node_modules/@fortawesome/fontawesome-free/css/fontawesome.min';
-@import '../../node_modules/@fortawesome/fontawesome-free/css/brands.min';
-@import '../../node_modules/@fortawesome/fontawesome-free/css/solid.min';
 // Defaults styles.
 @import 'common/fonts';
 @import 'common/vars';
@@ -27,3 +24,4 @@
 @import 'sections/home/sidebar';
 @import 'sections/home/big/big';
 @import 'sections/home/big/big-cards';
+@import 'sections/home/big/big-masters';

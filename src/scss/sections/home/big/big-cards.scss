@@ -1,5 +1,9 @@
 .big-scheme {
-    padding: 50px 0;
+    padding: 20px 0;
+
+    @media all and (min-width: $md) {
+        padding: 50px 0;
+    }
 
     h2 {
         margin-bottom: 50px;
@@ -59,10 +63,6 @@
         @media all and (min-width: $lg) {
 			font-size: 18px;
 		}
-
-        @media all and (min-width: $xxl) {
-        
-        }
 
         span {
             font-size: 35px;
