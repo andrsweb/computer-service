@@ -1,0 +1,65 @@
+.big-price {
+    padding: 0 0 30px;
+
+    &-items {
+        width: 100%;
+        background: $main;
+        padding: 20px;
+        border-radius: 20px;
+    }
+
+    &-row-name {
+        display: flex;
+        width: 100%;
+        margin-bottom: 40px;
+        font-weight: $fw-bold;
+        font-size: 24px;
+    }
+
+    &-col-name {
+        display: flex;
+
+        &:first-child {
+            width: 50%;
+        }
+
+        &:last-child {
+            width: 50%;
+            justify-content: flex-end;
+        }
+    }
+
+    &-row {
+        display: flex;
+        width: 100%;
+        margin-bottom: 20px;
+        padding: 0 5px;
+        border-radius: 20px;
+
+        &:nth-child( 2n + 1) {
+            background: $sect;
+            color: $black;
+        }
+    }
+
+    &-col {
+        display: flex;
+
+        &:first-child {
+            width: 50%;
+        }
+
+        &:last-child {
+            width: 50%;
+            justify-content: flex-end;
+        }
+    }
+}
+
+.big-wrapper.price {
+    padding-top: 200px;
+}
+
+
+
+
