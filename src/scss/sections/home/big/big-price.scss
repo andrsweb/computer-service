@@ -6,12 +6,29 @@
 	}
 
 	&-items {
+		position: relative;
 		width: 100%;
 		display: flex;
 		flex-direction: column;
 		background: $main;
 		padding: 20px;
 		border-radius: 20px;
+
+		&::before {
+			content: "";
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate( -50%, -50% );
+			display: block;
+			width: 100%;
+			height: 100%;
+			background-image: url( '../img/hero/notes.png');
+			background-repeat: no-repeat;
+			opacity: 0.1;
+			background-size: 70%;
+			background-position: center center;
+		}
 	}
 
 	&-row-name {

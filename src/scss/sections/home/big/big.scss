@@ -69,6 +69,7 @@
 			font-size: 15px;
 			width: 100%;
 			margin-bottom: 10px;
+			transition: opacity ease $tr;
 
 			@media all and (min-width: $lg) {
 				justify-content: flex-start;
@@ -84,6 +85,11 @@
 
 				&:last-child {
 					width: 33.333%;
+				}
+
+				&:hover {
+					color: $acc;
+					opacity: $op;
 				}
 			}
 
