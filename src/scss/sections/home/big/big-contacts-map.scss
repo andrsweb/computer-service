@@ -17,4 +17,33 @@
         border: 4px solid $acc;
         filter:grayscale( 60% );
     }
+
+    .masters-on-road {
+        margin-top: 20px;
+        font-size: 10px;
+        position: relative;
+        padding-left: 30px;
+
+        @media all and (min-width: $sm) {
+            font-size: 14px;
+        }
+
+        @media all and (min-width: $lg) {
+            font-size: 18px;
+        }
+
+        &::before {
+            position: absolute;
+            top: 50%;
+            left: 0;
+            transform: translateY( -50% );
+            content: "";
+            display: block;
+            width: 20px;
+            height: 20px;
+            background: $white;
+            border-radius: 50%;
+            border: 4px solid rgb(58, 148, 207);
+        }
+    }
 }
