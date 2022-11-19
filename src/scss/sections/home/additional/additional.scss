@@ -1,0 +1,139 @@
+.additional {
+
+    &-text {
+        text-align: center;
+        font-size: 15px;
+        margin-bottom: 20px;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+        @media all and (min-width: $md) {
+            text-align: left;
+            font-size: 20px;
+        }
+
+        &.origin {
+            font-size: 15px;
+            text-align: center;
+            min-height: 70px;
+        }
+    }
+
+    &-tel {
+        font-size: 25px;
+        font-weight: $fw-bold;
+    }
+
+    &-list {
+        margin: 20px 0;
+
+        &-item {
+            font-size: 16px;
+            margin-bottom: 10px;
+            position: relative;
+            padding-left: 20px;
+
+            &::before {
+                content: "";
+                display: block;
+                position: absolute;
+                width: 10px;
+                height: 10px;
+                background: $head;
+                top: 50%;
+                left: 0;
+                transform: translateY( -50% );
+            }
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    &-items {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 30px 0;
+        background: $white;
+        padding: 20px;
+        border-radius: 20px;
+    }
+
+    &-item {
+        margin: 0 -5px 30px -5px;
+        width: calc( 100% / 1 );
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+        @media all and (min-width: $lg) {
+            width: calc( 100% / 3 );
+            margin: 0 -5px;
+        }
+    }
+
+    &-inner {
+        padding: 0 5px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+    }
+
+    &-img {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        margin-bottom: 20px;
+    }
+
+    &-title {
+        text-align: center;
+        font-weight: $fw-semibold;
+        font-size: 17px;
+    }
+}
+
+.brands {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -10px;
+    background: $main;
+    border: 5px solid $acc;
+    padding: 20px;
+    border-radius: 20px;
+}
+
+.brand {
+    width: calc(100% / 3);
+    padding: 0 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 40px 0 0 0;
+    transition: opacity ease $tr;
+
+    &:nth-child( 1) {
+        margin: 0;
+    }
+
+    &:nth-child( 2 ) {
+        margin: 0;
+    }
+
+    &:nth-child( 3 ) {
+        margin: 0;
+    }
+
+    &:hover {
+        opacity: 0.5;
+    }
+}

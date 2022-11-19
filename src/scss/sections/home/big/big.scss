@@ -53,6 +53,10 @@
 			margin-bottom: 20px;
 			border-radius: 5px;
 
+			&:last-child {
+				margin-bottom: 0;
+			}
+
 			@media all and (min-width: $lg) {
 				flex-direction: row;
 			}
