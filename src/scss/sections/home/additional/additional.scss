@@ -100,3 +100,40 @@
         font-size: 17px;
     }
 }
+
+.brands {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -10px;
+    background: $main;
+    border: 5px solid $acc;
+    padding: 20px;
+    border-radius: 20px;
+}
+
+.brand {
+    width: calc(100% / 3);
+    padding: 0 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 40px 0 0 0;
+    transition: opacity ease $tr;
+
+    &:nth-child( 1) {
+        margin: 0;
+    }
+
+    &:nth-child( 2 ) {
+        margin: 0;
+    }
+
+    &:nth-child( 3 ) {
+        margin: 0;
+    }
+
+    &:hover {
+        opacity: 0.5;
+    }
+}
