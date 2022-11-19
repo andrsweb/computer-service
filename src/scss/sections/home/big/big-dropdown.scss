@@ -100,3 +100,12 @@
     font-size: 20px;
     margin: 0;
 }
+
+.contacts-link {
+    text-align: center;
+
+    a {
+        font-weight: $fw-bold;
+        text-decoration: underline dotted;
+    }
+}
