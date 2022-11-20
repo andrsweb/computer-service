@@ -373,8 +373,8 @@
 		transform: translateX( -50% );
 		padding: 10px;
 		z-index: 2;
-		border-bottom-right-radius: 20px;
-		border-bottom-left-radius: 20px;
+		border-bottom-right-radius: 5px;
+		border-bottom-left-radius: 5px;
 		box-shadow: 0 0 12px $acc;
 
 		@media all and (min-width: $md) {
