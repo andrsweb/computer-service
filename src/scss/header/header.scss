@@ -1,44 +1,15 @@
 .header{
-	padding: 20px 0;
+	padding: 10px 0;
 	background: $head;
 	position: fixed;
 	top: 0;
 	right: 0;
 	width: 100%;
 	z-index: 100;
-	transition: box-shadow ease $tr,
-				padding ease $tr;
+	transition: box-shadow ease $tr;
 
 		&.scrolled {
 			box-shadow: 1px 1px 5px 1px #080808ef;
-			padding: 15px 0;
-
-			@media all and (min-width: $md) {
-				padding: 15px 0;
-			}
-		}
-
-		&.night {
-			padding: 0 0 20px;
-
-			&.scrolled {
-				padding: 0 0 15px;
-			}
-
-			.hidden-element {
-				display: block;
-				padding: 5px;
-			}
-
-			.header-wrapper.opened {
-				top: 158px;
-				height: calc( 100% - 158px);
-
-				@media all and (min-width: 449px) {
-					top: 138px;
-					height: calc( 100% - 138px);
-				}
-			}
 		}
 
 	.container {
@@ -169,12 +140,12 @@
 			display: block;
 			position: fixed;
 			width: 100%;
-			top: 99px;
+			top: 78px;
 			right: 0;
 			background: $sect;
 			overflow-y: auto;
 			padding: 20px 0;
-			height: calc( 100% - 99px);
+			height: calc( 100% - 78px);
 
 			.header-nav-bot-item {
 				margin-bottom: 40px;
@@ -184,13 +155,21 @@
 				top: 70px;
 
 				.header-nav-item {
-					margin-bottom: 10px;
-					font-size: 15px;
+					margin-bottom: 20px;
+					font-size: 17px;
 				}
 			}
 
 			.header-nav-bot-item.has-children {
 				padding-bottom: 30px;
+			}
+
+			.header-nav-top-link {
+				margin-bottom: 20px;
+
+				&:last-child {
+					margin-bottom: 0;
+				}
 			}
 		}
 	}
@@ -404,6 +383,7 @@
 		font-size: 24px;
 		margin: 20px 0;
 		transition: opacity ease $tr;
+		text-shadow: 2px 4px 6px rgba(41, 41, 41, 0.863);
 
 		&:hover {
 			opacity: $op;

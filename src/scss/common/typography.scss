@@ -4,6 +4,7 @@ h3, .h3 {
 	font-weight: $fw-bold;
 	line-height: $lh-title;
 	margin: 0;
+	text-shadow: 4px 4px 2px rgba(150, 150, 150, 1);
 
 	&::selection {
 		color: $acc;
@@ -17,6 +18,10 @@ h1, .h1 {
 	text-align: center;
 
 	@media all and (min-width: $lg) {
+		font-size: 40px
+	}
+
+	@media all and (min-width: $xl) {
 		font-size: 45px
 	}
 }

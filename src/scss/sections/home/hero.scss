@@ -14,6 +14,7 @@
 		max-width: 1200px;
 	}
 
+
 	&-swiper {
 		display: flex;
 		overflow: visible;
@@ -30,12 +31,26 @@
 		align-items: center;
 
 		&-text {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
 			width: 100%;
 			margin-bottom: 40px;
 
 			@media all and (min-width: $md) {
 				width: 50%;
 				margin-bottom: 0;
+				align-items: flex-start;
+			}
+
+			.hero-subtext {
+				font-family: $ff;
+				font-weight: $fw-semibold;
+				font-size: 35px;
+				text-align: center;
+				color: rgb(78, 78, 77);
+				margin-bottom: 30px;
+				text-shadow: 2px 2px 2px rgba(150, 150, 150, 1);
 			}
 		}
 
@@ -43,7 +58,6 @@
 			margin-bottom: 30px;
 			display: flex;
 			flex-direction: column;
-			align-items: center;
 
 			@media all and (min-width: $md) {
 				align-items: flex-start;
@@ -87,13 +101,6 @@
 				width: 50%;
 			}
 		}
-	}
-
-	&-arrows {
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		margin-top: 10px;
 	}
 
 	.swiper-prev {

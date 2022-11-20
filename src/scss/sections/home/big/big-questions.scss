@@ -4,7 +4,7 @@
     &-wrapper {
         padding: 20px 10px;
         background: $white;
-        border-radius: 20px;
+        border-radius: 5px;
     }
 
     &-row {
@@ -64,7 +64,7 @@
             width: 100%;
             color: $white;
             background: $acc;
-            border-radius: 20px;
+            border-radius: 5px;
 
             @media all and (min-width: $xl) {
                 width: 50%;
