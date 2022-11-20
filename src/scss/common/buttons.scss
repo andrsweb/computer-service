@@ -8,21 +8,21 @@
 	font-weight: $fw-bold;
 	font-size: 20px;
 	text-decoration: none;
-	text-shadow: rgba(255,255,255,.5) 1px 1px, rgba(100,100,100,.3) 3px 7px 3px;
+	text-shadow: rgba(255, 255, 255, .5) 1px 1px, rgba(100, 100, 100, .3) 3px 7px 3px;
 	user-select: none;
 	outline: none;
 	border-radius: 3px / 100%;
 	background-image:
-	linear-gradient(45deg, rgba(255, 255, 255, 0) 30%, rgba(255,255,255,.8), rgba(255,255,255,.0) 70%),
-	linear-gradient(to right, rgba(255,255,255,1), rgba(255,255,255,0) 20%, rgba(255,255,255,0) 90%, rgba(255,255,255,.3)),
-	linear-gradient(to right, rgba(125,125,125,1), rgba(255,255,255,.9) 45%, rgba(125,125,125,.5)),
-	linear-gradient(to right, rgba(125,125,125,1), rgba(255,255,255,.9) 45%, rgba(125,125,125,.5)),
-	linear-gradient(to right, rgba(223,190,170,1), rgba(255,255,255,.9) 45%, rgba(223,190,170,.5)),
-	linear-gradient(to right, rgba(223,190,170,1), rgba(255,255,255,.9) 45%, rgba(223,190,170,.5));
+		linear-gradient(45deg, rgba(255, 255, 255, 0) 30%, rgba(255, 255, 255, .8), rgba(255, 255, 255, .0) 70%),
+		linear-gradient(to right, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0) 20%, rgba(255, 255, 255, 0) 90%, rgba(255, 255, 255, .3)),
+		linear-gradient(to right, rgba(125, 125, 125, 1), rgba(255, 255, 255, .9) 45%, rgba(125, 125, 125, .5)),
+		linear-gradient(to right, rgba(125, 125, 125, 1), rgba(255, 255, 255, .9) 45%, rgba(125, 125, 125, .5)),
+		linear-gradient(to right, rgba(223, 190, 170, 1), rgba(255, 255, 255, .9) 45%, rgba(223, 190, 170, .5)),
+		linear-gradient(to right, rgba(223, 190, 170, 1), rgba(255, 255, 255, .9) 45%, rgba(223, 190, 170, .5));
 	background-repeat: no-repeat;
 	background-size: 200% 100%, auto, 100% 2px, 100% 2px, 100% 1px, 100% 1px;
 	background-position: 200% 0, 0 0, 0 0, 0 100%, 0 4px, 0 calc(100% - 4px);
-	box-shadow: rgba(0,0,0,.5) 3px 10px 10px -10px;
+	box-shadow: rgba(0, 0, 0, .5) 3px 10px 10px -10px;
 	cursor: pointer;
 
 	@media all and (min-width: $md) {
@@ -62,30 +62,31 @@
 	}
 
 	span {
-        position: absolute;
-        top: 6px;
-        right: 3px;
-        display: block;
-        background: $black;
-        width: 100%;
-        height: 3px;
+		position: absolute;
+		top: 6px;
+		right: 3px;
+		display: block;
+		background: $black;
+		width: 100%;
+		height: 3px;
 		border-radius: 3px;
 
-        &::after, &::before {
-            content: "";
-            display: block;
-            position: absolute;
-            background: $black;
-            top: 10px;
-            right: 0;
-            width: 100%;
-            height: 3px;
+		&::after,
+		&::before {
+			content: "";
+			display: block;
+			position: absolute;
+			background: $black;
+			top: 10px;
+			right: 0;
+			width: 100%;
+			height: 3px;
 			border-radius: 3px;
-        }
+		}
 
-        &::before {
-            top: 20px;
-        }
+		&::before {
+			top: 20px;
+		}
 	}
 
 
@@ -124,5 +125,63 @@
 
 	&:hover {
 		opacity: $op;
+	}
+}
+
+svg {
+	width: 50px;
+	height: auto;
+	margin: 0 2rem;
+	cursor: pointer;
+	overflow: visible;
+
+	polygon,
+	path {
+		transition: all 0.5s $ease;
+	}
+
+	&:hover polygon,
+	&:hover path {
+		transition: all 1s $ease;
+		fill: $acc;
+	}
+
+	&:hover .arrow {
+		animation: arrow-anim 2.5s $ease infinite;
+	}
+
+	&:hover .arrow-fixed {
+		animation: arrow-fixed-anim 2.5s $ease infinite;
+	}
+}
+
+
+@keyframes arrow-anim {
+	0% {
+		opacity: 1;
+		transform: translateX(0);
+	}
+
+	5% {
+		transform: translateX(-0.1rem);
+	}
+
+	100% {
+		transform: translateX(1rem);
+		opacity: 0;
+	}
+}
+
+@keyframes arrow-fixed-anim {
+	5% {
+		opacity: 0;
+	}
+
+	20% {
+		opacity: 0.4;
+	}
+
+	100% {
+		opacity: 1;
 	}
 }
