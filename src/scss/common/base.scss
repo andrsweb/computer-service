@@ -6,7 +6,7 @@
 body, html {
 	height: 100%;
 	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-	margin: 0
+	margin: 0;
 }
 
 body {
@@ -18,10 +18,11 @@ body {
 	font-size: $fs-md;
 	line-height: $lh;
 	color: $black;
-	background-color: $white
+	background-color: $white;
 }
 
 img {
+	display: block;
 	max-width: 100%;
 	height: auto
 }

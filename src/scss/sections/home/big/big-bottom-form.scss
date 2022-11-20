@@ -1,0 +1,21 @@
+.big-bottom-form {
+    padding: 50px 0;
+
+    &-wrapper {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    &-info {
+        margin-bottom: 30px;
+    }
+
+    &-text {
+        font-size: 15px;
+        text-align: center;
+    }
+
+    .small-form-wrapper {
+        justify-content: center;
+    }
+}

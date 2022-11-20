@@ -1,0 +1,162 @@
+.testimonials {
+    padding: 10px 0;
+    position: relative;
+
+    &-inner {
+        display: flex;
+        flex-direction: column;
+        background: $white;
+        padding: 20px;
+        border-radius: 5px;
+        margin-bottom: 20px;
+
+    }
+
+    &-info {
+        display: flex;
+        justify-content: flex-start;
+    }
+
+    &-img {
+        margin: 0 20px 20px 0;
+    }
+
+    &-name {
+        font-weight: $fw-bold;
+        margin-bottom: 10px;
+    }
+
+    &-stars {
+        display: flex;
+    }
+
+    &-text {
+        font-size: 12px;
+        padding: 0 10px;
+
+        @media all and (min-width: $lg) {
+			font-size: 15px;
+		}
+
+        @media all and (min-width: $xxl) {
+			font-size: 18px;
+		}
+    }
+
+    .swiper-scrollbar-drag {
+        background: $acc;
+        cursor: pointer;
+        transition: opacity ease $tr;
+
+        &:hover {
+            opacity: $op;
+        }
+    }
+
+    .swiper-scrollbar.swiper-scrollbar-horizontal {
+        background: $main;
+        height: 20px;
+    }
+
+    .big-testimonials-inner {
+        margin-bottom: 40px;
+    }
+
+    .big-prev {
+        display: block;
+        width: 40px;
+        height: 40px;
+        background: $white;
+        position: absolute;
+        bottom: 0;
+        left: 20%; //
+        border-radius: 50%;
+        cursor: pointer;
+        transition: scale ease $tr;
+        z-index: 100;
+
+        @media all and (min-width: $sm) {
+			left: 30%;
+		}
+
+        @media all and (min-width: $m) {
+			left: 35%;
+		}
+
+        @media all and (min-width: 1070px) {
+			left: 40%;
+		}
+
+        &:hover {
+            scale: 1.05;
+        }
+
+        &::before {
+            content: "";
+            display: block;
+            width: 15px;
+            height: 15px;
+            border-bottom: 4px solid $acc;
+            border-right: 4px solid $acc;
+            position: absolute;
+            top: 50%;
+            left: 35%;
+            transform: translateY( -50% )
+                            rotate( 135deg );
+        }
+    }
+
+    .big-next {
+        display: block;
+        width: 40px;
+        height: 40px;
+        background: $white;
+        position: absolute;
+        bottom: 0;
+        right: 20%;
+        border-radius: 50%;
+        cursor: pointer;
+        transition: scale ease $tr;
+        z-index: 100;
+
+        @media all and (min-width: $sm) {
+			right: 30%;
+		}
+
+        @media all and (min-width: $m) {
+			right: 35%;
+		}
+
+        @media all and (min-width: 1070px) {
+			right: 40%;
+		}
+
+        &:hover {
+            scale: 1.05;
+        }
+
+        &::before {
+            content: "";
+            display: block;
+            width: 15px;
+            height: 15px;
+            border-bottom: 4px solid $acc;
+            border-right: 4px solid $acc;
+            position: absolute;
+            top: 50%;
+            right: 35%;
+            transform: translateY( -50% )
+                            rotate( -45deg );
+        }
+    }
+
+    .swiper-pagination-total, .swiper-pagination-current {
+        font-family: $ff;
+        color: $acc;
+        font-size: 25px;
+    }
+
+    .swiper-horizontal > .swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper-pagination-custom, .swiper-pagination-fraction {
+        bottom: 3px;
+    }
+}

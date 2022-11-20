@@ -1,0 +1,115 @@
+.big-price {
+	padding: 40px 0 20px;
+
+	@media all and (min-width: $md) {
+		padding: 0 0 60px;
+	}
+
+	&-items {
+		position: relative;
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		background: $main;
+		padding: 20px;
+		border-radius: 5px;
+
+		&::before {
+			content: "";
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate( -50%, -50% );
+			display: block;
+			width: 100%;
+			height: 100%;
+			background-image: url( '../img/hero/notes.png');
+			background-repeat: no-repeat;
+			opacity: 0.1;
+			background-size: 70%;
+			background-position: center center;
+		}
+	}
+
+	&-row-name {
+		display: flex;
+		width: 100%;
+		margin-bottom: 40px;
+		font-weight: $fw-bold;
+		font-size: 16px;
+
+		@media all and (min-width: $m) {
+			font-size: 18px;
+		}
+
+		@media all and (min-width: $xl) {
+			font-size: 24px;
+		}
+	}
+
+	&-col-name {
+		display: flex;
+
+		&:first-child {
+			width: 50%;
+		}
+
+		&:last-child {
+			width: 50%;
+			justify-content: flex-end;
+		}
+	}
+
+	&-row {
+		display: flex;
+		width: 100%;
+		margin-bottom: 20px;
+		padding: 0 5px;
+		border-radius: 5px;
+
+		&:nth-child( 2n + 1) {
+			background: $sect;
+			color: $black;
+		}
+	}
+
+	&-col {
+		display: flex;
+		align-items: center;
+		font-size: 14px;
+		padding: 0 5px;
+
+		@media all and (min-width: $m) {
+			font-size: 16px;
+		}
+
+		@media all and (min-width: $xl) {
+			font-size: 20px;
+		}
+
+		&:first-child {
+			width: 50%;
+		}
+
+		&:last-child {
+			width: 50%;
+			justify-content: flex-end;
+		}
+	}
+}
+
+.big-wrapper.price {
+	padding-top: 120px;
+
+	@media all and (min-width: $md) {
+		padding-top: 150px;
+	}
+
+	@media all and (min-width: $lg) {
+		padding-top: 200px;
+	}
+}
+
+
+
+

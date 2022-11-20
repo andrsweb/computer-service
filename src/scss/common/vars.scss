@@ -1,6 +1,7 @@
 // Grid.
 $xs	: 375px;
 $sm	: 480px;
+$m	: 576px;
 $md	: 768px;
 $lg	: 992px;
 $xl	: 1200px;
@@ -15,30 +16,35 @@ $container-xl: 1200px;
 $container-padding: 24px;
 
 // Font families.
-$ff			: Arial, sans-serif;
-$ff-title	: Arial, sans-serif;
+$ff			: 'Cera Round Pro', sans-serif;
+$ff-logo	: 'Nebulosa Display Solid', sans-serif;
 
 // Font sizes.
-$fs-xs	: 12px;
-$fs-sm	: 14px;
-$fs-md	: 16px;
-$fs-lg	: 18px;
-$fs-xl	: 20px;
+$fs-xs	: 14px;
+$fs-sm	: 16px;
+$fs-md	: 20px;
+$fs-lg	: 30px;
+$fs-xl	: 40px;
 
 // Font weights.
 $fw-light	: 300;
 $fw-regular	: 400;
-$fw-medium	: 500;
 $fw-semibold: 600;
-$fw-bold	: 700;
+$fw-bold	: 900;
 
 // Line heights.
 $lh			: 1.5;
 $lh-title	: 1.3;
 
 // Colors.
-$white	: #FFFFFF;
-$black	: #000000;
+$white	: #fff;
+$black	: #000;
+$sect	: #afacac;
+$main   : #EDEBD7;
+$head   : #ecc260;
+$acc    : #423E37;
 
 // Others.
 $tr: 0.35s;
+$op: 0.7;
+$ease: cubic-bezier(.2, 1, .3, 1);

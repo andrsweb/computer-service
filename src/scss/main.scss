@@ -1,9 +1,18 @@
+@import '../../node_modules/swiper/swiper-bundle.min';
 // Defaults styles.
 @import 'common/fonts';
 @import 'common/vars';
 @import 'common/typography';
 @import 'common/grid';
 @import 'common/base';
+@import 'common/fonts';
+@import 'common/buttons';
+
+//forms
+
+@import 'sections/forms/small-form';
+@import 'sections/forms/form';
+@import 'sections/home/big/big-form-sale';
 
 // Header styles.
 @import 'header/header';
@@ -13,3 +22,33 @@
 
 // Home page sections styles.
 @import 'sections/home/hero';
+@import 'sections/home/cards';
+@import 'sections/home/sidebar';
+@import 'sections/home/big/big';
+@import 'sections/home/big/big-cards';
+@import 'sections/home/big/big-masters';
+@import 'sections/home/big/big-testi';
+@import 'sections/home/big/big-questions';
+@import 'sections/home/big/big-bottom-form';
+@import 'sections/home/big/big-tech';
+
+//price styles
+@import 'sections/home/big/big-price';
+@import 'sections/home/big/big-info';
+
+//sales styles
+@import 'sections/home/big/big-dropdown';
+
+// about styles
+@import 'sections/home/big/big-about';
+
+//contacts styles
+@import 'sections/home/big/big-contacts';
+@import 'sections/home/big/big-contacts-map';
+@import 'sections/home/big/big-contacts-help';
+
+//additional styles
+@import 'sections/home/additional/additional';
+
+
+

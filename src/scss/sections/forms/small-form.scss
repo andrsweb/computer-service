@@ -1,0 +1,40 @@
+.small-form {
+    margin-bottom: 20px;
+
+    fieldset {
+        display: flex;
+        border: 0;
+        padding: 0;
+        margin: 0;
+
+        input {
+            width: 100%;
+            max-width: 200px;
+            height: 38px;
+            border-radius: 5px;
+            border-style: none;
+            border: 1px solid $main;
+            padding-left: 10px;
+            font-family: $ff;
+            font-size: 12px;
+            margin-right: 10px;
+
+            @media all and (min-width: $md) {
+				font-size: 15px;
+			}
+
+            &::placeholder {
+                opacity: 1;
+            }
+        }
+    }
+
+    &-wrapper {
+        display: flex;
+        justify-content: center;
+
+        @media all and (min-width: $md) {
+            justify-content: flex-start;
+        }
+    }
+}

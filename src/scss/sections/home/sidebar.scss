@@ -1,0 +1,196 @@
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    border: 5px solid $acc;
+    border-radius: 5px;
+    padding: 10px 5px;
+    background: $main;
+
+    @media all and (min-width: $md) {
+        width: 30%;
+    }
+
+    h2 {
+        font-size: 40px;
+        color: $acc;
+    }
+
+    h3 {
+        color: $acc;
+        font-size: 23px;
+
+        @media all and (min-width: $lg) {
+            font-size: 30px;
+        }
+    }
+
+    &-text {
+        text-align: center;
+        font-family: $ff;
+        font-weight: $fw-bold;
+        font-size: 25px;
+        color: $acc;
+
+        @media all and (min-width: $md) {
+            font-size: 20px;
+        }
+
+        &-wrapp {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 90%;
+            padding: 10px 0;
+            border-radius: 5px;
+            margin: 0 auto;
+
+            img {
+                margin-bottom: 20px;
+            }
+        }
+    }
+
+    &-links {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &-link {
+        display: flex;
+        align-items: center;
+        padding: 10px 0;
+        text-align: center;
+        width: 90%;
+        background: $white;
+        margin-bottom: 20px;
+        color: $acc;
+        border-radius: 5px;
+        transition: background ease 0.5s,
+                        color ease 0.5;
+        font-size: 12px;
+
+        @media all and (min-width: $sm) {
+            font-size: 18px;
+        }
+
+        @media all and (min-width: $md) {
+            font-size: 12px;
+            padding: 5px 5px;
+            width: 90%;
+        }
+
+        @media all and (min-width: $lg) {
+            font-size: 13px;
+            width: 90%;
+        }
+
+        @media all and (min-width: $xl) {
+            font-size: 16px;
+        }
+
+        &:hover {
+            color: $white;
+            background: $acc;
+        }
+
+        img {
+            padding: 5px;
+            border-radius: 50%;
+            background: $white;
+            margin: 0 10px;
+        }
+    }
+
+    .small-form-wrapper {
+        justify-content: center;
+        margin: 30px 0;
+
+        .small-form {
+            width: 100%;
+        }
+
+        fieldset {
+            flex-direction: column;
+            width: 100%;
+            padding: 0 5%;
+
+            @media all and (min-width: $sm) {
+                flex-direction: row;
+            }
+
+            @media all and (min-width: $md) {
+                flex-direction: column;
+            }
+
+            input {
+                max-width: 100%;
+            }
+
+            .form-button {
+                margin: 10px auto;
+                max-width: 100%;
+
+                @media all and (min-width: $sm) {
+                    margin: 0 auto;
+                }
+
+                @media all and (min-width: $md) {
+                    margin: 10px auto;
+                }
+            }
+        }
+    }
+
+    .button {
+        margin: 20px auto;
+        max-width: 90%;
+
+        @media all and (min-width: $md) {
+            font-size: 20px;
+        }
+    }
+
+    .sidebar-anim-text {
+        cursor:default;
+        display: flex;
+        align-items: center;
+        writing-mode: vertical-lr;
+        width: 100%;
+        height: 100%;
+        font-size: 200px;
+        white-space: nowrap;
+        font-family: $ff-logo;
+        font-weight: $fw-bold;
+        color: $acc;
+        vertical-align: middle;
+        transform: translateY(100%);
+        animation: text 100s linear infinite alternate-reverse;
+        letter-spacing: 50px;
+
+        @media all and (min-width: $lg) {
+            font-size: 300px;
+        }
+
+        @keyframes text {
+            from {
+                transform: translateY(0);
+            }
+            to {
+                transform: translateY(-100%);
+            }
+        }
+
+        &-wrapper {
+            overflow: hidden;
+            height: 100%;
+            display: none;
+
+            @media all and (min-width: $md) {
+                display: block;
+            }
+        }
+    }
+}

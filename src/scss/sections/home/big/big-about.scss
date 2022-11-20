@@ -1,0 +1,106 @@
+.about-hero {
+	padding: 100px 0 30px;
+	background: $main;
+
+	@media all and (min-width: $md) {
+		padding: 180px 0 30px;
+	}
+
+	@media all and (min-width: $lg) {
+		padding: 220px 0 30px;
+	}
+
+	.container{
+		max-width: 1200px;
+	}
+
+	&-wrapper {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+	}
+
+    &-text {
+        width: 100%;
+
+        @media all and (min-width: $md) {
+            width: 50%;
+        }
+    }
+
+    &-list {
+        margin-bottom: 30px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        @media all and (min-width: $md) {
+            align-items: flex-start;
+        }
+    }
+
+    &-list-item {
+        position: relative;
+        padding-left: 20px;
+        font-size: 16px;
+
+        @media all and (min-width: $m) {
+            font-size: 18px;
+        }
+
+        @media all and (min-width: $xl) {
+            font-size: 22px;
+        }
+
+        &::after {
+            content: "";
+            position: absolute;
+            display: block;
+            width: 10px;
+            height: 10px;
+            background: $head;
+            border-radius: 2px;
+            top: 50%;
+            left: 0;
+            transform: translateY( -50% );
+        }
+    }
+
+    &-img {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+
+        @media all and (min-width: $md) {
+            width: 50%;
+        }
+    }
+}
+
+.about-title {
+    font-size: 18px;
+    margin: 20px auto;
+    color: $black;
+    position: relative;
+    padding-left: 20px;
+    display: inline-block;
+
+    &::before {
+        content: "";
+        display: block;
+        width: 10px;
+        height: 10px;
+        background: $head;
+        position: absolute;
+        top: 50%;
+        left: 0;
+        transform: translateY( -50% );
+    }
+}
+
+.about-text {
+    font-size: 16px;
+    color: $acc;
+    padding-left: 40px;
+}

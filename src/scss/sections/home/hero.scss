@@ -1,0 +1,127 @@
+.hero {
+	padding: 100px 0 30px;
+	background: #ece7dc;
+
+	@media all and (min-width: $md) {
+		padding: 180px 0 30px;
+	}
+
+	@media all and (min-width: $lg) {
+		padding: 220px 0 30px;
+	}
+
+	.container{
+		max-width: 1200px;
+	}
+
+
+	&-swiper {
+		display: flex;
+		overflow: visible;
+	}
+
+	.swiper-slide-next, .swiper-slide-prev {
+		opacity: 0.08;
+		transition: opacity ease 1s;
+	}
+
+	&-slide {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+
+		&-text {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			width: 100%;
+			margin-bottom: 40px;
+
+			@media all and (min-width: $md) {
+				width: 50%;
+				margin-bottom: 0;
+				align-items: flex-start;
+			}
+
+			.hero-subtext {
+				font-family: $ff;
+				font-weight: $fw-semibold;
+				font-size: 35px;
+				text-align: center;
+				color: rgb(78, 78, 77);
+				margin-bottom: 30px;
+				text-shadow: 2px 2px 2px rgba(150, 150, 150, 1);
+			}
+		}
+
+		&-list {
+			margin-bottom: 30px;
+			display: flex;
+			flex-direction: column;
+
+			@media all and (min-width: $md) {
+				align-items: flex-start;
+			}
+		}
+
+		&-list-item {
+			position: relative;
+			padding-left: 20px;
+			font-size: 16px;
+
+			@media all and (min-width: $m) {
+				font-size: 18px;
+			}
+
+			@media all and (min-width: $xl) {
+				font-size: 22px;
+			}
+
+			&::after {
+				content: "";
+				position: absolute;
+				display: block;
+				width: 10px;
+				height: 10px;
+				background: $head;
+				border-radius: 2px;
+				top: 50%;
+				left: 0;
+				transform: translateY( -50% );
+			}
+		}
+
+		&-img {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			width: 100%;
+
+			@media all and (min-width: $md) {
+				width: 50%;
+			}
+		}
+	}
+
+	.swiper-prev {
+		margin-right: 50px;
+		cursor: pointer;
+		transition: scale ease $tr;
+
+		img {
+			transform: rotate(180deg);
+		}
+
+		&:hover {
+			scale: 1.05;
+		}
+	}
+	.swiper-next {
+		cursor: pointer;
+		transition: scale ease $tr;
+
+		&:hover {
+			scale: 1.05;
+		}
+	}
+}
