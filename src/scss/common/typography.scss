@@ -4,6 +4,11 @@ h3, .h3 {
 	font-weight: $fw-bold;
 	line-height: $lh-title;
 	margin: 0;
+
+	&::selection {
+		color: $acc;
+		background: $head;
+	}
 }
 
 h1, .h1 {
@@ -48,11 +53,23 @@ a {
 	}
 }
 
+div {
+	&::selection {
+		color: $acc;
+		background: $head;
+	}
+}
+
 p {
 	margin: 0;
 
 	&:last-of-type {
 		margin-bottom: 0
+	}
+
+	&::selection {
+		color: $acc;
+		background: $head;
 	}
 }
 

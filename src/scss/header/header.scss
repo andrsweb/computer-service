@@ -10,11 +10,34 @@
 				padding ease $tr;
 
 		&.scrolled {
-			box-shadow: 1px 1px 6px 1px #f3ececef;
+			box-shadow: 1px 1px 5px 1px #080808ef;
 			padding: 15px 0;
 
 			@media all and (min-width: $md) {
 				padding: 15px 0;
+			}
+		}
+
+		&.night {
+			padding: 0 0 20px;
+
+			&.scrolled {
+				padding: 0 0 15px;
+			}
+
+			.hidden-element {
+				display: block;
+				padding: 5px;
+			}
+
+			.header-wrapper.opened {
+				top: 158px;
+				height: calc( 100% - 158px);
+
+				@media all and (min-width: 449px) {
+					top: 138px;
+					height: calc( 100% - 138px);
+				}
 			}
 		}
 
@@ -144,12 +167,31 @@
 
 		&.opened {
 			display: block;
-			overflow-y: auto;
 			position: fixed;
 			width: 100%;
 			top: 99px;
 			right: 0;
 			background: $sect;
+			overflow-y: auto;
+			padding: 20px 0;
+			height: calc( 100% - 99px);
+
+			.header-nav-bot-item {
+				margin-bottom: 40px;
+			}
+
+			.header-submenu {
+				top: 70px;
+
+				.header-nav-item {
+					margin-bottom: 10px;
+					font-size: 15px;
+				}
+			}
+
+			.header-nav-bot-item.has-children {
+				padding-bottom: 30px;
+			}
 		}
 	}
 
@@ -282,7 +324,7 @@
 
 			&.has-children {
 				cursor: pointer;
-				padding-bottom: 12px;
+				padding-bottom: 20px;
 
 				&.opened {
 					ul {
@@ -294,6 +336,15 @@
 					&::after {
 						transform: rotate( 180deg)
 								translateX( -50% );
+					}
+				}
+
+				a {
+					transition: opacity ease $tr;
+
+					&:hover {
+						opacity: $tr;
+						color: $acc;
 					}
 				}
 
@@ -328,6 +379,9 @@
 		transform: translateX( -50% );
 		padding: 10px;
 		z-index: 2;
+		border-bottom-right-radius: 20px;
+		border-bottom-left-radius: 20px;
+		box-shadow: 0 0 12px $acc;
 
 		.header-nav-item {
 			margin-bottom: 10px;
@@ -432,5 +486,21 @@
 			opacity: $op;
 		}
 	}
+
+	.hidden-element {
+		display: none;
+		width: 100%;
+		text-align: center;
+		background: red;
+		font-size: 13px;
+		color: $white;
+		margin-bottom: 10px;
+
+		@media all and (min-width: $md) {
+			font-size: 15px;
+		}
+	}
 }
+
+
 

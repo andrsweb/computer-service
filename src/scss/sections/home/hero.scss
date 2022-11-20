@@ -1,6 +1,6 @@
 .hero {
 	padding: 100px 0 30px;
-	background: $sect;
+	background: #ece7dc;
 
 	@media all and (min-width: $md) {
 		padding: 180px 0 30px;
@@ -16,6 +16,12 @@
 
 	&-swiper {
 		display: flex;
+		overflow: visible;
+	}
+
+	.swiper-slide-next, .swiper-slide-prev {
+		opacity: 0.08;
+		transition: opacity ease 1s;
 	}
 
 	&-slide {
@@ -25,9 +31,11 @@
 
 		&-text {
 			width: 100%;
+			margin-bottom: 40px;
 
 			@media all and (min-width: $md) {
 				width: 50%;
+				margin-bottom: 0;
 			}
 		}
 
