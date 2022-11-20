@@ -5,7 +5,7 @@ document.addEventListener( 'DOMContentLoaded', () => {
     'use strict'
 
     toggleBurgerMenu( '.burger-button', '.header-wrapper', '.has-children' )
-	setInterval(() => showHidden(), 60000)
+	showHidden()
 } )
 
 const toggleBurgerMenu = ( button, selector, child  ) => {
@@ -48,7 +48,7 @@ const toggleBurgerMenu = ( button, selector, child  ) => {
         const windowWidth = window.innerWidth
         const WINDOW_WIDTH_MD = 767
 
-        if( windowWidth >= WINDOW_WIDTH_MD ) {
+        if( windowWidth >= WINDOW_WIDTH_MD &&  headerWrapper.classList.contains( 'opened' ) ) {
             headerWrapper.classList.remove( 'opened' )
             burgerButton.classList.remove( 'opened' )
 			headerNavLink.forEach( item => item.classList.remove( 'opened' ) )
@@ -72,10 +72,29 @@ const toggleBurgerMenu = ( button, selector, child  ) => {
 }
 
 const showHidden = () => {
-	const header = document.querySelector( '.header' )
-
-	let date = new Date
+	const form = document.querySelector( '.form-wrapper' )
+	const banner = form.querySelector( '.hidden-element' )
+	let date = new Date()
 	let hour = date.getHours()
+	let oldDate,
+		currentDate = date.getTime(),
+		datesDiff
 
-	if( hour >= 23 || hour < 8 )  header.classList.add( 'night' )
+	if( hour >= 23 || hour < 8 ) {
+		if( ! localStorage.getItem( 'formShownDate') ) {
+			localStorage.setItem( 'formShownDate', currentDate )
+			form.classList.add( 'opened' )
+		} else {
+			oldDate = localStorage.getItem( 'formShownDate' )
+			datesDiff = Math.floor( ( currentDate - oldDate ) / ( 1000 * 60 * 60 ) )
+
+			if( datesDiff > 12 ) {
+				form.classList.add( 'opened' )
+				localStorage.setItem( 'formShownDate', currentDate )
+			}
+		}
+	} else {
+		if ( banner ) banner.remove()
+		if( localStorage.getItem( 'formShownDate') ) localStorage.removeItem( 'formShownDate' )
+	}
 }

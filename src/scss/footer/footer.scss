@@ -155,3 +155,16 @@
         display: block;
     }
 }
+
+.hidden-element {
+    width: 100%;
+    text-align: center;
+    background: red;
+    font-size: 13px;
+    color: $white;
+    padding: 5px;
+
+    @media all and (min-width: $md) {
+        font-size: 15px;
+    }
+}
