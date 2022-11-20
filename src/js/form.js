@@ -5,7 +5,7 @@ document.addEventListener( 'DOMContentLoaded', () => {
 	'use strict'
 
 	formOnClick()
-	submitForm( '.form', '.form-response', 'send-form.php')
+	submitForm( '.form' )
 } )
 
 const formOnClick = () => {
@@ -50,7 +50,12 @@ const formOnClick = () => {
 	} )
 }
 
-const submitForm = ( selector, response, php ) => {
+/**
+ * Submit form.
+ *
+ * @param {String}	selector	Form CSS-selector.
+ */
+const submitForm = ( selector ) => {
 	const forms	= document.querySelectorAll( selector )
 
 	if( ! forms.length ) return
@@ -59,11 +64,15 @@ const submitForm = ( selector, response, php ) => {
 		form.addEventListener( 'submit', e => {
 			e.preventDefault()
 
-			const formResponse	= form.querySelector( response ),
+			const formResponse	= form.querySelector( '.form-response' ),
 					request		= new XMLHttpRequest(),
-					formData		= new FormData( form )
+					formData	= new FormData( form )
 
-			request.open( 'post', php, true )
+			// Add request param for large or small form.
+			form.classList.contains( 'small-form' )
+				? formData.append( 'func', 'as_send_small_form' )
+				: formData.append( 'func', 'as_send_large_form' )
+			request.open( 'post', 'send-form.php', true )
 			request.responseType = 'json'
 
 			formResponse.classList.remove( ['success', 'error'] )
