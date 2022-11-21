@@ -18,8 +18,24 @@
 		margin: 0 0 20px 0;
 	}
 
+	.hero-h3 {
+		color: rgb(71, 70, 70);
+		margin-bottom: 0;
+		font-size: 28px;
+		padding: 0 10px;
+	}
+
 	.hero-h2 {
 		color: rgb(71, 70, 70);
+		margin-bottom: 0;
+		font-size: 28px;
+		background: rgba(255, 255, 255, 0.171);
+		border-radius: 5px;
+		padding: 2px 0;
+	}
+
+	&-slide-text {
+		width: 50%;
 	}
 
 	&-wrapper {
@@ -30,6 +46,7 @@
 	&-swiper {
 		display: flex;
 		width: 50%;
+		padding: 10px;
 	}
 
 	&-text-wrapper {
@@ -97,6 +114,13 @@
 		display: flex;
 		flex-wrap: wrap;
 		align-items: center;
+		justify-content: flex-end;
+		width: 50%;
+		background: rgba(255, 255, 255, 0.377);
+		padding: 20px;
+		border-radius: 5px;
+		height: 100%;
+		box-shadow: 2px 4px 8px 0px rgba(0, 0, 0, 0.493);
 
 		&-img {
 			display: flex;
