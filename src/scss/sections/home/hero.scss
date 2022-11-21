@@ -7,7 +7,7 @@
 	}
 
 	@media all and (min-width: $lg) {
-		padding: 220px 0 30px;
+		padding: 175px 0 10px;
 	}
 
 	.container{
@@ -17,12 +17,6 @@
 
 	&-swiper {
 		display: flex;
-		overflow: visible;
-	}
-
-	.swiper-slide-next, .swiper-slide-prev {
-		opacity: 0.08;
-		transition: opacity ease 1s;
 	}
 
 	&-slide {
@@ -46,7 +40,7 @@
 			.hero-subtext {
 				font-family: $ff;
 				font-weight: $fw-semibold;
-				font-size: 35px;
+				font-size: 33px;
 				text-align: center;
 				color: rgb(78, 78, 77);
 				margin-bottom: 30px;
