@@ -1,8 +1,27 @@
 <section class="hero">
 	<div class="container">
-		<div class="swiper hero-swiper">
-			<div class="swiper-wrapper hero-wrapper">
-				@@include( 'hero-slides.html')
+		<h1>Компьютерный сервис</h1>
+		<h2 class="hero-h2">В Долгопрудном</h2>
+		<div class="hero-wrapper">
+			<div class="hero-text-wrapper">
+				<h2>Дарим скидку на ремонт</h2>
+				<ul class="hero-list">
+					<li class="hero-slide-list-item">
+						Выезд мастера за 30 минут
+					</li>
+					<li class="hero-list-item">
+						Бесплатная диагностика
+					</li>
+					<li class="hero-list-item">
+						Официальная гарантия 1 год
+					</li>
+				</ul>
+				@@include( '../../../forms/small-form.html')
+			</div>
+			<div class="swiper hero-swiper">
+				<div class="swiper-wrapper hero-wrapper">
+					@@include( 'hero-slides.html')
+				</div>
 			</div>
 		</div>
 	</div>
