@@ -2,6 +2,7 @@
 	padding: 100px 0 30px;
 	background: $main;
     position: relative;
+    overflow: hidden;
 
     &::before {
 		content: '';
