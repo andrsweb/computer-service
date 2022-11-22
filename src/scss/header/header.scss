@@ -9,7 +9,7 @@
 	transition: box-shadow ease $tr;
 
 		&.scrolled {
-			box-shadow: 1px 1px 5px 1px #080808ef;
+			box-shadow: 1px 1px 2px 1px #db9a20c5;
 		}
 
 	.container {
@@ -449,6 +449,7 @@
 			line-height: 1;
 			margin-right: 40px;
 			color: $white;
+			text-shadow: 3px 2px 4px rgba(0, 0, 0, 0.637);
 		}
 
 		.header-week {
@@ -456,6 +457,7 @@
 			font-weight: $fw-bold;
 			line-height: 1;
 			color: $white;
+			text-shadow: 3px 2px 4px rgba(0, 0, 0, 0.637);
 		}
 	}
 

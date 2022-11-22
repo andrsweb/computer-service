@@ -1,6 +1,19 @@
 .hero {
-	padding: 100px 0 30px;
+	padding: 100px 0 10px;
 	background: #ece7dc;
+	position: relative;
+	overflow: hidden;
+
+	&:before {
+		content: '';
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		height: 30px;
+		z-index: 1;
+		background: linear-gradient(to top, rgb(237, 235, 215), transparent);
+	}
 
 	@media all and (min-width: $md) {
 		padding: 180px 0 30px;
@@ -10,7 +23,7 @@
 		padding: 175px 0 10px;
 	}
 
-	.container{
+	.container {
 		max-width: 1200px;
 	}
 
@@ -21,32 +34,82 @@
 	.hero-h3 {
 		color: rgb(71, 70, 70);
 		margin-bottom: 0;
-		font-size: 28px;
+		font-size: 20px;
 		padding: 0 10px;
+		margin-bottom: 20px;
+
+		@media all and (min-width: $m) {
+			font-size: 15px;
+		}
+
+		@media all and (min-width: $md) {
+			font-size: 24px;
+		}
+
+		@media all and (min-width: $lg) {
+			font-size: 28px;
+		}
 	}
 
 	.hero-h2 {
 		color: rgb(71, 70, 70);
 		margin-bottom: 0;
-		font-size: 28px;
-		background: rgba(255, 255, 255, 0.171);
 		border-radius: 5px;
 		padding: 2px 0;
+		margin-bottom: 30px;
+
+		@media all and (min-width: $lg) {
+			font-size: 35px;
+		}
+	}
+
+	h2 {
+		font-size: 20px;
+
+		@media all and (min-width: $lg) {
+			font-size: 28px;
+		}
+	}
+
+	&-bg {
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		top: 25%;
+		left: 0;
+		opacity: 0.1;
+		z-index: 0;
 	}
 
 	&-slide-text {
-		width: 50%;
+		width: 100%;
 	}
 
 	&-wrapper {
+		position: relative;
+		z-index: 50;
 		display: flex;
+		flex-direction: column;
 		align-items: center;
+		z-index: 2;
+
+		@media all and (min-width: $m) {
+			flex-direction: row;
+		}
 	}
 
-	&-swiper {
+	&-swiper-wrapper {
 		display: flex;
-		width: 50%;
+		width: 100%;
 		padding: 10px;
+
+		@media all and (min-width: $m) {
+			width: 40%;
+		}
+
+		@media all and (min-width: $md) {
+			width: 50%;
+		}
 	}
 
 	&-text-wrapper {
@@ -54,7 +117,13 @@
 		flex-direction: column;
 		align-items: center;
 		width: 100%;
-		margin-bottom: 40px;
+		margin-bottom: 10px;
+
+		@media all and (min-width: $m) {
+			width: calc(60% - 30px);
+			margin-bottom: 0;
+			margin-right: 30px;
+		}
 
 		@media all and (min-width: $md) {
 			width: 50%;
@@ -106,7 +175,7 @@
 			border-radius: 2px;
 			top: 50%;
 			left: 0;
-			transform: translateY( -50% );
+			transform: translateY(-50%);
 		}
 	}
 
@@ -114,9 +183,9 @@
 		display: flex;
 		flex-wrap: wrap;
 		align-items: center;
-		justify-content: flex-end;
+		justify-content: center;
 		width: 50%;
-		background: rgba(255, 255, 255, 0.377);
+		background: rgba(250, 247, 242, 0.808);
 		padding: 20px;
 		border-radius: 5px;
 		height: 100%;
@@ -147,6 +216,7 @@
 			scale: 1.05;
 		}
 	}
+
 	.swiper-next {
 		cursor: pointer;
 		transition: scale ease $tr;
