@@ -25,6 +25,8 @@
 
 	.container {
 		max-width: 1200px;
+		position: relative;
+		z-index: 50;
 	}
 
 	h1 {
@@ -78,7 +80,6 @@
 		top: 25%;
 		left: 0;
 		opacity: 0.1;
-		z-index: 0;
 	}
 
 	&-slide-text {
@@ -87,11 +88,9 @@
 
 	&-wrapper {
 		position: relative;
-		z-index: 50;
 		display: flex;
 		flex-direction: column;
 		align-items: center;
-		z-index: 2;
 
 		@media all and (min-width: $m) {
 			flex-direction: row;

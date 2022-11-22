@@ -2,6 +2,7 @@
     padding: 20px 0;
     background: $head;
     position: relative;
+    overflow: hidden;
 
     &:before {
 		content: '';
@@ -16,6 +17,17 @@
 
     .container {
         max-width: 1200px;
+    }
+
+    .header-wrapper {
+        z-index: 2;
+    }
+
+    .footer-bg {
+        position: absolute;
+        bottom: 0;
+        right: 10%;
+        opacity: 0.1;
     }
 
     &-nav-bot {
@@ -77,6 +89,10 @@
         display: flex;
     }
 
+    .header-week {
+        margin-bottom: 30px;
+    }
+
     .header-wrapper {
         display: flex;
         width: 100%;
@@ -86,6 +102,28 @@
         @media all and (min-width: $lg) {
             flex-direction: row;
             align-items: flex-start;
+        }
+    }
+
+    .footer-logo {
+        display: none;
+        max-width: 200px;
+
+        @media all and (min-width: $lg) {
+            display: block;
+        }
+
+        img {
+            margin-bottom: 20px;
+        }
+
+        &-text {
+            font-family: $ff;
+            color: $white;
+            text-align: center;
+            font-weight: $fw-bold;
+            font-size: 24px;
+            text-shadow: 3px 2px 4px rgba(150, 150, 150, 1);
         }
     }
 

@@ -58,6 +58,10 @@
         height: 20px;
     }
 
+    .swiper-scrollbar-drag {
+        transition: opacity ease $tr;
+    }
+
     .big-testimonials-inner {
         margin-bottom: 40px;
     }
