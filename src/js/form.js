@@ -18,8 +18,8 @@ const formOnClick = () => {
 	formButton.forEach( button => {
 		button.addEventListener( 'click', () => {
 			if ( ! formWrapper.classList.contains( 'opened' ) ) {
-				disableBodyScroll( getTargetElement() )
 				formWrapper.classList.add( 'opened' )
+				disableBodyScroll( getTargetElement(), { reserveScrollBarGap: true } )
 			} else {
 				formWrapper.classList.remove( 'opened' )
 				enableBodyScroll( getTargetElement() )
