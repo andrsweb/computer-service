@@ -125,7 +125,7 @@
 		}
 
 		@media all and (min-width: $md) {
-			width: 50%;
+			width: 45%;
 			margin-bottom: 0;
 			align-items: flex-start;
 		}
@@ -184,7 +184,6 @@
 		align-items: center;
 		justify-content: center;
 		width: 50%;
-		background: rgba(250, 247, 242, 0.808);
 		padding: 20px;
 		border-radius: 5px;
 		height: 100%;
@@ -196,7 +195,7 @@
 			width: 100%;
 
 			@media all and (min-width: $md) {
-				width: 50%;
+				width: 55%;
 			}
 		}
 	}
